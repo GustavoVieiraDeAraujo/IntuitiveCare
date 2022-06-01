@@ -10,3 +10,4 @@
   <li>Agrupar os anexos em um mesmo arquivo compactado (ZIP, RAR, ...);</li>
 </ul>
 
+Observação:O codigo gera um arquivo ZIP, o qual será necessario no Teste 2.
