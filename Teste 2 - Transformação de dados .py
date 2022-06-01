@@ -1,6 +1,7 @@
 #Bibliotecas utilizadas
 import os
 import csv
+import shutil
 import tabula
 from zipfile import ZipFile, ZIP_DEFLATED
 
@@ -42,3 +43,10 @@ with open("./temporario/convertido.csv", "r", encoding='utf-8') as convertido:
             else:
                 csv.writer(formatado, delimiter=',').writerow(
                     formatarLinha(linha))
+
+#Zipando o arquivo "Anexo I.csv"
+ziparArquivoDeUmaPasta("./temporario", "Anexo I.csv",
+                       "Teste_Gustavo_Vieira_de_Araújo.zip")
+                       
+#Excluindo pasta "temporario"
+shutil.rmtree("./temporario")
