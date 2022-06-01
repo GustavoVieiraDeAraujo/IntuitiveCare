@@ -10,3 +10,6 @@
   <li>Zipar o csv num arquivo "Teste_{seu_nome}.zip";</li>
   <li>Substituir os dados abreviados das colunas OD e AMB para as respectivas descrições: Seg. Odontologia e Seg. Ambulatorial;</li>
 </ul>
+
+<h3>Observação: O codigo desse teste precisa do arquivo ZIP gerado pelo teste 1 para funcionar.</h3>
+
