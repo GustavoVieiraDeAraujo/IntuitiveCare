@@ -1,5 +1,6 @@
 # Bibliotecas utilizadas
 import os
+import shutil
 import requests
 from requests.exceptions import HTTPError
 from zipfile import ZipFile, ZIP_DEFLATED
@@ -37,3 +38,15 @@ dicionarioEndereçosArquivos = {
     "Anexo III.pdf": "Anexo_III_DC_2021_RN_465.2021.v2.pdf",
     "Anexo IV.pdf": "Anexo_IV_PROUT_2021_RN_465.2021.v2.pdf",
 }
+
+# Criando pasta "temporario" para guardar os arquivos baixados
+os.makedirs("./temporario")
+
+# Baixando Arquivos e Zipando a pasta que contem os arquivos baixados
+for enderecoArquivo in dicionarioEndereçosArquivos:
+    baixarArquivo(
+        endereçoBase+dicionarioEndereçosArquivos[enderecoArquivo], os.path.join("temporario", enderecoArquivo))
+ziparPasta("temporario", "Anexos.zip")
+
+# Excluindo pasta "Anexos"
+shutil.rmtree("./temporario")
